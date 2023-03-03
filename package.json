@@ -1,0 +1,33 @@
+{
+  "name": "canvas-framework",
+  "version": "1.0.0",
+  "description": "> A JS exercise use at HEPL for MMI.",
+  "main": "webpack.mix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecg-mmi/canvas-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tecg-mmi/canvas-framework/issues"
+  },
+  "homepage": "https://github.com/tecg-mmi/canvas-framework#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^12.6.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "reset-css": "^5.0.1"
+  }
+}
