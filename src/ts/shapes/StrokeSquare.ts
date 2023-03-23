@@ -1,20 +1,15 @@
 import {Hsl} from "../Colors/Hsl";
 import {Rgb} from "../Colors/Rgb";
-import {IPosition} from "./IPosition";
+import {Position} from "../Types/position";
+import {Canvas} from "../Canvas";
+import {Square} from "./Square";
 
-export class StrokeSquare {
-    private readonly ctx: CanvasRenderingContext2D;
-    private position: IPosition;
-    private readonly side: number;
+export class StrokeSquare extends Square {
     private readonly strokeWidth: number;
-    private readonly color: Hsl | Rgb;
 
-    constructor(ctx: CanvasRenderingContext2D, color: Hsl | Rgb, position: IPosition, side: number, strokeWidth: number = 1) {
-        this.ctx = ctx;
-        this.position = position;
-        this.side = side;
+    constructor(canvas: Canvas, color: Hsl | Rgb, side: number, strokeWidth: number, position: Position, speed?: number, direction?: number) {
+        super(canvas, color, side, position, speed, direction)
         this.strokeWidth = strokeWidth;
-        this.color = color;
     }
 
     draw() {

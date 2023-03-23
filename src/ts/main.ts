@@ -1,8 +1,5 @@
-import {run} from "./tests/shapes.test";
+function main(): void {
 
-function main(): number {
-    run();
-    return 0;
 }
 
 main();

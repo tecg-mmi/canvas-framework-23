@@ -1,18 +1,15 @@
 import {Hsl} from "../Colors/Hsl";
 import {Rgb} from "../Colors/Rgb";
-import {IPosition} from "./IPosition";
+import {Position} from "../Types/position";
+import {Shape} from "./Shape";
+import {Canvas} from "../Canvas";
 
-export class Square {
-    private readonly ctx: CanvasRenderingContext2D;
-    private position: IPosition;
-    private readonly side: number;
-    private readonly color: Hsl | Rgb;
+export class Square extends Shape {
+    protected readonly side: number;
 
-    constructor(ctx: CanvasRenderingContext2D, color: Hsl | Rgb, position: IPosition, side: number) {
-        this.ctx = ctx;
-        this.position = position;
+    constructor(canvas: Canvas, color: Hsl | Rgb, side: number, position: Position, speed?: number, direction?: number) {
+        super(canvas, position, speed, direction, color);
         this.side = side;
-        this.color = color;
     }
 
     draw() {

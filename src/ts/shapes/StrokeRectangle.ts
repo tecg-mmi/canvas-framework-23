@@ -1,26 +1,18 @@
 import {Hsl} from "../Colors/Hsl";
 import {Rgb} from "../Colors/Rgb";
-import {IPosition} from "./IPosition";
+import {Position} from "../Types/position";
+import {Rectangle} from "./Rectangle";
+import {Canvas} from "../Canvas";
 
 /*
  *
  */
-export class StrokeRectangle {
-    private readonly ctx: CanvasRenderingContext2D;
-
-    private position: IPosition;
-    private readonly width: number;
-    private readonly height: number;
+export class StrokeRectangle extends Rectangle {
     private readonly strokeWidth: number;
-    private readonly color: Hsl | Rgb;
 
-    constructor(ctx: CanvasRenderingContext2D, color: Hsl | Rgb, position: IPosition, width: number, height: number, strokeWidth: number = 1) {
-        this.ctx = ctx;
-        this.position = position;
+    constructor(canvas: Canvas, color: Hsl | Rgb, width: number, height: number, strokeWidth: number, position: Position, speed?: number, direction?: number) {
+        super(canvas, color, width, height, position, speed, direction)
         this.strokeWidth = strokeWidth;
-        this.width = width;
-        this.height = height;
-        this.color = color
     }
 
     /**
