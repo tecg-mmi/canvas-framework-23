@@ -1,22 +1,20 @@
-import {Hsl} from "../Colors/Hsl";
-import {Rgb} from "../Colors/Rgb";
 import {Position} from "../Types/position";
-import {Canvas} from "../Canvas";
 import {Shape} from "./Shape";
 import {Animatable} from "../Types/Animatable";
+import {ICircle} from "../Types/ICircle";
 
 export class Circle extends Shape implements Animatable {
     protected readonly radius: number;
 
-    constructor(canvas: Canvas, color: Hsl | Rgb, radius: number, position: Position, speed?: number, direction?: number) {
-        super(canvas, position, speed, direction, color);
-        this.radius = radius;
+    constructor(circle: ICircle) {
+        super(circle);
+        this.radius = circle.radius;
     }
 
     draw() {
         this.ctx.beginPath();
         this.ctx.fillStyle = `${this.color}`;
-        this.ctx.arc(this.position.x,this.position.y,this.radius,0,Math.PI*2);
+        this.ctx.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2);
         this.ctx.fill();
         this.ctx.closePath();
         return this;
