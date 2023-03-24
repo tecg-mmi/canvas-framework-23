@@ -23,10 +23,6 @@ export class Rectangle extends Shape implements Animatable {
         return this;
     }
 
-    clear() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-
     update() {
         this.position.x += Math.floor(this.speed * Math.cos(this.direction));
         this.position.y += Math.floor(this.speed * Math.sin(this.direction));

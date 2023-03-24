@@ -29,6 +29,10 @@ export class Canvas {
         return this._width;
     }
 
+    clear() {
+        this.ctx.clearRect(0, 0, this.width, this.height);
+    }
+
     constructor(canvasElement: HTMLCanvasElement, height?: number, width?: number) {
         this.canvasElement = canvasElement;
         if (height !== undefined) {

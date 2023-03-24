@@ -20,10 +20,6 @@ export class Circle extends Shape implements Animatable {
         return this;
     }
 
-    clear() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-
     update() {
         // Calculer la prochaine position du cercle en fonction de sa vitesse et de sa direction
         const nextX = this.position.x + this.speed * Math.cos(this.direction);
