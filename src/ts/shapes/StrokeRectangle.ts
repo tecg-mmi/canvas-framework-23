@@ -1,8 +1,4 @@
-import {Hsl} from "../Colors/Hsl";
-import {Rgb} from "../Colors/Rgb";
-import {Position} from "../Types/position";
 import {Rectangle} from "./Rectangle";
-import {Canvas} from "../Canvas";
 import {IStrokeRectangle} from "../Types/IStrokeRectangle";
 
 /*

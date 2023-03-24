@@ -1,7 +1,3 @@
-import {Hsl} from "../Colors/Hsl";
-import {Rgb} from "../Colors/Rgb";
-import {Position} from "../Types/position";
-import {Canvas} from "../Canvas";
 import {Square} from "./Square";
 import {IStrokeSquare} from "../Types/IStrokeSquare";
 

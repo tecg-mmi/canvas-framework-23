@@ -1,8 +1,4 @@
-import {Hsl} from "../Colors/Hsl";
-import {Rgb} from "../Colors/Rgb";
-import {Position} from "../Types/position";
 import {Shape} from "./Shape";
-import {Canvas} from "../Canvas";
 import {ISquare} from "../Types/ISquare";
 
 export class Square extends Shape {

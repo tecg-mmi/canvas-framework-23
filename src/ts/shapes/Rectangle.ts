@@ -1,7 +1,4 @@
-import {Hsl} from "../Colors/Hsl";
-import {Rgb} from "../Colors/Rgb";
 import {Position} from "../Types/position";
-import {Canvas} from "../Canvas";
 import {Shape} from "./Shape";
 import {Animatable} from "../Types/Animatable";
 import {IRectangle} from "../Types/IRectangle";
