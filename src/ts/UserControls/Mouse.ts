@@ -10,8 +10,8 @@ export class Mouse extends Circle {
             radius: mouse.radius,
         });
         this.canvas.canvasElement.addEventListener('mousemove', (event: MouseEvent) => {
-            this.position.x = event.x;
-            this.position.y = event.y;
+            this.position.x = event.offsetX;
+            this.position.y = event.offsetY;
         });
     }
 
