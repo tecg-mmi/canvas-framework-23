@@ -7,6 +7,6 @@ export interface IShape {
     canvas: Canvas;
     position: Position;
     speed: number;
-    direction: number;
+    direction?: number;
     color: Hsl | Rgb;
 }
