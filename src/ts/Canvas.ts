@@ -1,7 +1,7 @@
 export class Canvas {
     private _height: number;
     private _width: number;
-    private canvasElement: HTMLCanvasElement;
+    public canvasElement: HTMLCanvasElement;
     public readonly ctx: CanvasRenderingContext2D;
     private readonly autoHeight: boolean;
     private readonly autoWidth: boolean;
