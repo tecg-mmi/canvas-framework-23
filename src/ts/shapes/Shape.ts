@@ -21,7 +21,7 @@ export abstract class Shape {
         this.ctx = this.canvas.ctx;
         this.position = shape.position.y && shape.position.x ? shape.position : {x: 0, y: 0};
         this.color = shape.color as Rgb !== undefined || shape.color as Hsl !== undefined ? shape.color : new Rgb(250, 0, 0);
-        this.speed = shape.speed > 0 ? shape.speed : 1;
+        this.speed = shape.speed != undefined && shape.speed > 0 ? shape.speed : 1;
         this.direction = shape.direction > 0 ? shape.direction : Math.random() * Math.PI * 2;
     }
 }

@@ -6,7 +6,7 @@ import {Position} from "./Position";
 export interface IShape {
     canvas: Canvas;
     position: Position;
-    speed: number;
+    speed?: number;
     direction?: number;
     color: Hsl | Rgb;
 }
