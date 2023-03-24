@@ -13,17 +13,17 @@ export class Random {
         if (this.min < this.max) {
             return this.min + Math.random() * (this.max - this.min);
         }
-        return 1 + Math.random() * 100;
+        return Math.floor(1 + Math.random() * 100);
     }
 
     static nextInt(min: number, max: number): number {
         if (min < max) {
-            return min + Math.random() * (max - min);
+            return Math.floor(min + Math.random() * (max - min));
         }
-        return 1 + Math.random() * 100;
+        return Math.floor(1 + Math.random() * 100);
     }
 
     static nextIntMinMax(minMax: MinMax): number {
-        return this.nextInt(minMax.max, minMax.max);
+        return this.nextInt(minMax.min, minMax.max);
     }
 }
