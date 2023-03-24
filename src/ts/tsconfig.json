@@ -6,5 +6,6 @@
     "preserveConstEnums": true,
     "target": "es6",
     "sourceMap": true
-  }
+  },
+  "references": []
 }
