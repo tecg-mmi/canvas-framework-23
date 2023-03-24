@@ -3,13 +3,14 @@ import {Rgb} from "../Colors/Rgb";
 import {Position} from "../Types/position";
 import {Canvas} from "../Canvas";
 import {Square} from "./Square";
+import {IStrokeSquare} from "../Types/IStrokeSquare";
 
 export class StrokeSquare extends Square {
     private readonly strokeWidth: number;
 
-    constructor(canvas: Canvas, color: Hsl | Rgb, side: number, strokeWidth: number, position: Position, speed?: number, direction?: number) {
-        super(canvas, color, side, position, speed, direction)
-        this.strokeWidth = strokeWidth;
+    constructor(strokeSquare: IStrokeSquare) {
+        super(strokeSquare)
+        this.strokeWidth = strokeSquare.strokeWidth;
     }
 
     draw() {

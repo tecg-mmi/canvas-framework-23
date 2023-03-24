@@ -4,15 +4,16 @@ import {Position} from "../Types/position";
 import {Canvas} from "../Canvas";
 import {Shape} from "./Shape";
 import {Animatable} from "../Types/Animatable";
+import {IRectangle} from "../Types/IRectangle";
 
 export class Rectangle extends Shape implements Animatable {
     protected readonly width: number;
     protected readonly height: number;
 
-    constructor(canvas: Canvas, color: Hsl | Rgb, width: number, height: number, position: Position, speed?: number, direction?: number) {
-        super(canvas, position, speed, direction, color);
-        this.width = width;
-        this.height = height;
+    constructor(rectangle: IRectangle) {
+        super(rectangle);
+        this.width = rectangle.width;
+        this.height = rectangle.height;
     }
 
     draw() {
