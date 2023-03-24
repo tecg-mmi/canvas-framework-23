@@ -1,3 +1,5 @@
+import {MinMax} from "../Types/MinMax";
+
 export class Random {
     private readonly min: number;
     private readonly max: number;
@@ -19,5 +21,9 @@ export class Random {
             return min + Math.random() * (max - min);
         }
         return 1 + Math.random() * 100;
+    }
+
+    static nextIntMinMax(minMax: MinMax): number {
+        return this.nextInt(minMax.max, minMax.max);
     }
 }

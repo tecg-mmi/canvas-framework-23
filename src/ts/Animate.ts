@@ -19,10 +19,10 @@ export class Animate {
     }
 
     private animate() {
+        this.canvas.clear();
         this.animated.forEach((animate) => {
-            this.canvas.clear();
-            animate.draw();
             animate.update();
+            animate.draw();
         });
         requestAnimationFrame(this.animate.bind(this));
     }

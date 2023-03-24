@@ -22,8 +22,8 @@ export class Circle extends Shape implements Animatable {
 
     update() {
         // Calculer la prochaine position du cercle en fonction de sa vitesse et de sa direction
-        const nextX = this.position.x + this.speed * Math.cos(this.direction);
-        const nextY = this.position.y + this.speed * Math.sin(this.direction);
+        const nextX = Math.trunc(this.position.x + this.speed * Math.cos(this.direction));
+        const nextY = Math.trunc(this.position.y + this.speed * Math.sin(this.direction));
 
         // Vérifier si le cercle touche le bord droit ou gauche de la zone de dessin
         if (nextX + this.radius >= this.canvas.width || nextX - this.radius <= 0) {
@@ -38,8 +38,8 @@ export class Circle extends Shape implements Animatable {
         }
 
         // Mettre à jour la position du cercle
-        this.position.x += this.speed * Math.cos(this.direction);
-        this.position.y += this.speed * Math.sin(this.direction);
+        this.position.x += Math.trunc(this.speed * Math.cos(this.direction));
+        this.position.y += Math.trunc(this.speed * Math.sin(this.direction));
     }
 
     setDirectionByMousePosition(position: Position) {
