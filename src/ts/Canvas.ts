@@ -1,10 +1,11 @@
+import {Dimension} from "./Types/Dimension";
+
 export class Canvas {
     private _height: number;
     private _width: number;
     public canvasElement: HTMLCanvasElement;
     public readonly ctx: CanvasRenderingContext2D;
-    private readonly autoHeight: boolean;
-    private readonly autoWidth: boolean;
+    private readonly autoDimension: boolean;
 
     public set height(value: number) {
         if (value > 0) {
@@ -33,29 +34,22 @@ export class Canvas {
         this.ctx.clearRect(0, 0, this.width, this.height);
     }
 
-    constructor(canvasElement: HTMLCanvasElement, height?: number, width?: number) {
+    constructor(canvasElement: HTMLCanvasElement, dimension?: Dimension) {
         this.canvasElement = canvasElement;
-        if (height !== undefined) {
-            this.height = height;
+        if (dimension !== undefined) {
+            this.height = dimension.height;
+            this.width = dimension.width;
         } else {
-            this.autoHeight = true;
-            this.height = window.innerHeight;
-        }
-
-        if (width !== undefined) {
-            this.width = width;
-        } else {
-            this.autoWidth = true;
+            this.autoDimension = true;
             this.width = innerWidth;
+            this.height = window.innerHeight;
         }
         this.ctx = this.canvasElement.getContext('2d');
 
-        if (this.autoHeight || this.autoHeight) {
+        if (this.autoDimension || this.autoDimension) {
             window.addEventListener('resize', () => {
-                if (this.autoHeight) {
+                if (this.autoDimension) {
                     this.height = innerHeight;
-                }
-                if (this.autoWidth) {
                     this.width = innerWidth;
                 }
             })
