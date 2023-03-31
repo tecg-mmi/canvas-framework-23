@@ -1,7 +1,7 @@
 export class Hsl {
-    private readonly hue: number;
-    private readonly saturation: number;
-    private readonly lightness: number;
+    protected readonly hue: number;
+    protected readonly saturation: number;
+    protected readonly lightness: number;
 
     constructor(hue: number, saturation: number, lightness: number) {
         this.hue = hue;

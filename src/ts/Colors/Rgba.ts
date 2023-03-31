@@ -7,4 +7,9 @@ export class Rgba extends Rgb {
         super(red, green, blue);
         this.alpha = alpha;
     }
+
+
+    public toString = (): string => {
+        return `rgba(${this.red},${this.green},${this.blue},${this.alpha})`;
+    }
 }

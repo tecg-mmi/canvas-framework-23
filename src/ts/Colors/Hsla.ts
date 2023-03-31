@@ -7,4 +7,8 @@ export class Hsla extends Hsl {
         super(hue, saturation, lightness);
         this.alpha = alpha;
     }
+
+    public toString = (): string => {
+        return `hsla(${this.hue},${this.saturation}%,${this.lightness}%,${this.alpha})`;
+    }
 }

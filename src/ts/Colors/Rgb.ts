@@ -1,7 +1,7 @@
 export class Rgb {
-    private readonly red: number;
-    private readonly green: number;
-    private readonly blue: number;
+    protected readonly red: number;
+    protected readonly green: number;
+    protected readonly blue: number;
 
     constructor(red: number, green: number, blue: number) {
         this.red = red;
