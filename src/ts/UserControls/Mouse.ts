@@ -2,7 +2,7 @@ import {Circle} from "../Shapes/Circle";
 import {IMouse} from "../Types/IMouse";
 
 /*
-* It represents a mouse cursor (extended from Circle) on a canvas and allows tracking its position using the mousemove event.
+* It represents a mouse cursor by a circle (extended from Circle), we can allow it to be visible with a radius and a color on a canvas and allows tracking its position using the mousemove event.
  */
 
 export class Mouse extends Circle {
@@ -24,11 +24,11 @@ export class Mouse extends Circle {
     }
 
     /*
-    * The update() method is currently empty and needs to be implemented.
+    * The update() method throw an exception.
      */
 
     update() {
-        //
+        throw new Error("Method not implemented.");
     }
 
 }
