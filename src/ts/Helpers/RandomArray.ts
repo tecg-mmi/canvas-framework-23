@@ -1,5 +1,5 @@
 /*
-*Defines a class called RandomArray that holds an array of elements of a generic type and make possible to work with random tables. The constructor initializes the array property with the provided array.
+*Defines a class called RandomArray that holds an array of elements of a generic type and make possible to work with random table. The constructor initializes the array property with the provided array.
  */
 export class RandomArray<Type> {
     private readonly array: Array<Type>;
