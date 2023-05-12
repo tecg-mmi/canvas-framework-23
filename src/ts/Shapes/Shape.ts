@@ -5,7 +5,7 @@ import {Canvas} from "../Canvas";
 import {IShape} from "../Types/IShape";
 
 /**
- * The Shape class is an abstract class that serves as a base class for all shapes in the application. It provides common properties and methods for all shapes.
+ * The Shape class is an abstract class that serves as the base class for all shapes in the application, it cannot be used on its own, it is only used to extend other classes. It provides properties and methods common to all shapes.
  */
 export abstract class Shape {
     /**
