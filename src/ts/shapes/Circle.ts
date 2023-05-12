@@ -45,4 +45,8 @@ export class Circle extends Shape implements Animatable {
     setDirectionByMousePosition(position: Position) {
         this.direction = Math.atan2(position.y - this.position.y, position.x - this.position.x);
     }
+
+    clear(): void {
+        throw new Error("Method not implemented.");
+    }
 }

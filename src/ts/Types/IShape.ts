@@ -8,5 +8,5 @@ export interface IShape {
     position: Position;
     speed?: number;
     direction?: number;
-    color: Hsl | Rgb;
+    color: Hsl | Rgb | string;
 }

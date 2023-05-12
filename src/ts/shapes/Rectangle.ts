@@ -13,6 +13,7 @@ export class Rectangle extends Shape implements Animatable {
         this.height = rectangle.height;
     }
 
+
     draw() {
         this.ctx.save(); // sauvegarde l'état actuel du contexte
         this.ctx.translate(Math.trunc(this.position.x + this.width / 2), Math.trunc(this.position.y + this.height / 2)); // déplace l'origine du système de coordonnées au centre du rectangle
@@ -39,4 +40,9 @@ export class Rectangle extends Shape implements Animatable {
     setDirectionByMousePosition(position: Position) {
         this.direction = Math.atan2(position.y - this.position.y, position.x - this.position.x);
     }
+
+    clear(): void {
+        throw new Error("Method not implemented.");
+    }
+
 }

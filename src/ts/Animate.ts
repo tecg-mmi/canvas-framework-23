@@ -1,12 +1,12 @@
 import {Animatable} from "./Types/Animatable";
-import {Canvas} from "./Canvas";
+import {GameStatus} from "./Types/GameStatus";
 
 export class Animate {
     private animated: Animatable[];
-    private canvas: Canvas;
+    private gameStatus: GameStatus;
 
-    constructor(canvas: Canvas) {
-        this.canvas = canvas;
+    constructor(gameStatus: GameStatus) {
+        this.gameStatus = gameStatus;
         this.animated = [];
     }
 
@@ -19,11 +19,13 @@ export class Animate {
     }
 
     private animate() {
-        this.canvas.clear();
-        this.animated.forEach((animate) => {
-            animate.update();
-            animate.draw();
-        });
-        requestAnimationFrame(this.animate.bind(this));
+        if (this.gameStatus.start) {
+            this.animated.forEach((animate) => {
+                animate.clear();
+                animate.update();
+                animate.draw();
+            });
+            requestAnimationFrame(this.animate.bind(this));
+        }
     }
 }

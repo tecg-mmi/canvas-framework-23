@@ -6,10 +6,10 @@ import {IShape} from "../Types/IShape";
 
 export abstract class Shape {
     protected readonly ctx: CanvasRenderingContext2D;
-    protected position: Position;
+    position: Position;
     protected readonly speed: number;
     protected direction: number;
-    color: Hsl | Rgb;
+    color: Hsl | Rgb | string;
     protected canvas: Canvas;
 
 
