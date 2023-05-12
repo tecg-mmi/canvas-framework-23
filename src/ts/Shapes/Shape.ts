@@ -4,15 +4,42 @@ import {Rgb} from "../Colors/Rgb";
 import {Canvas} from "../Canvas";
 import {IShape} from "../Types/IShape";
 
+/**
+ * The Shape class is an abstract class that serves as a base class for all shapes in the application. It provides common properties and methods for all shapes.
+ */
 export abstract class Shape {
+    /**
+     * The canvas rendering context used to draw the shape.
+     * @readonly
+     */
     protected readonly ctx: CanvasRenderingContext2D;
+    /**
+     * The position of the shape on the canvas.
+     */
     position: Position;
+    /**
+     * The speed of the shape.
+     * @readonly
+     */
     protected readonly speed: number;
+    /**
+     * The direction of the shape.
+     */
     protected direction: number;
+    /**
+     * The color of the shape.
+     */
     color: Hsl | Rgb | string;
+    /**
+     * The canvas on which the shape is drawn.
+     */
     protected canvas: Canvas;
 
-
+    /**
+     *
+     * @param shape - A constructor method that initializes a Shape object with the provided IShape object.
+     * @throws {EvalError} The canvas must be defined in the shape object.
+     */
     constructor(shape: IShape) {
         if (shape.canvas === undefined) {
             throw EvalError("The canvas must be defined");
