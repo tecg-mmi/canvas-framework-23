@@ -1,6 +1,6 @@
 import {Hsl} from "./Hsl";
 /*
-* This Hsl class allows you create colors of HSLA types. that Hsla inherits all the properties and methods of Hsl class.
+* This Hsl class allows you to create colors of HSLA types. that Hsla inherits all the properties and methods of Hsl class.
 * */
 export class Hsla extends Hsl {
     /*
