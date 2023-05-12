@@ -1,6 +1,6 @@
 
 /*
-* This Hsl class allows you create colors of HSL types
+* This Hsl class allows you to create colors of HSL types
 * */
 export class Hsl {
     /*
