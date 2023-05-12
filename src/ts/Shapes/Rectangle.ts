@@ -58,7 +58,7 @@ export class Rectangle extends Shape implements Animatable {
         }
     }
 
- /**
+    /**
      * Sets the direction of the rectangle based on the position of the mouse cursor.
      *
      * @param position The current position of the mouse cursor.
@@ -69,9 +69,8 @@ export class Rectangle extends Shape implements Animatable {
 
     /**
      * Clears the rectangle from the canvas.
-     * @throws This method is not implemented.
      */
     clear(): void {
-        throw new Error("Method not implemented.");
+        this.ctx.clearRect(this.position.x, this.position.y, this.width, this.height);
     }
 }
