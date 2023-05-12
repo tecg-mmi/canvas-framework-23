@@ -4,15 +4,15 @@
 * */
 export class Hsl {
     /*
-    * This proprety defines a protected instance variable called hue that stores the hue component of the color, represented as a number between 0 and 360. this property is readonly
+    * This proprety defines a protected instance variable that stores the hue component of the color, int(0-360) (read only).
     * */
     protected readonly hue: number;
     /*
-    * This proprety defines a protected instance variable called saturation that stores the saturation component of the color, represented as a number between 0 and 100. this property is readonly
+    * This proprety defines a protected instance variable that stores the saturation component of the color, int(0-100) (read only).
     * */
     protected readonly saturation: number;
     /*
-    * This proprety defines a protected instance variable called lightness that stores the lightness component of the color, represented as a number between 0 and 100. this property is readonly
+    * This proprety defines a protected instance variable that stores the lightness component of the color, int(0-100) (read only).
     * */
     protected readonly lightness: number;
 
@@ -28,8 +28,7 @@ export class Hsl {
     }
 
     /*
-    * @return : It returns a string in HSL format to create the color with the hue, saturation, and lightness initialized in the constructor
-    * This is a public method called toString that returns a string representation of the color in the HSL format. It uses template literals to construct a string that includes the hue, saturation, and lightness values, separated by commas and surrounded by the hsl() function. The method has an arrow function expression assigned to it, which is a concise way of defining a function in TypeScript.
+    * @return : @return a string of the color in hsl form (hsl(hue,saturation,lightness)).
     * */
     public toString = (): string => {
         return `hsl(${this.hue},${this.saturation}%,${this.lightness}%)`;
