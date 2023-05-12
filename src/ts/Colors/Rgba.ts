@@ -4,14 +4,10 @@ import {Rgb} from "./Rgb";
  * An RGBA color.
  *
  * @extends Rgb
- * @param red - The red component of the RGBA color int(0-255) (read only).
- * @readonly
- * @param green - The green component of the RGBA color int(0-255) (read only).
- * @readonly
- * @param blue - The blue component of the RGBA color int(0-255).
- * @readonly
- * @param alpha - The alpha component of the RGBA color float(0-1).
- * @readonly
+ * @param @readonly red - The red component of the RGBA color int(0-255).
+ * @param @readonly green - The green component of the RGBA color int(0-255).
+ * @param @readonly blue - The blue component of the RGBA color int(0-255).
+ * @param @readonly alpha - The alpha component of the RGBA color float(0-1).
  */
 export class Rgba extends Rgb {
     private readonly alpha: number;
@@ -20,13 +16,9 @@ export class Rgba extends Rgb {
      * Creates an instance of the Rgba class.
      *
      * @param red - The red component of the RGBA color int(0-255).
-     * @readonly
      * @param green - The green component of the RGBA color int(0-255).
-     * @readonly
      * @param blue - The blue component of the RGBA color int(0-255).
-     * @readonly
      * @param alpha - The alpha component of the RGBA color float(0-1).
-     * @readonly
      */
     constructor(red: number, green: number, blue: number, alpha: number) {
         super(red, green, blue);
