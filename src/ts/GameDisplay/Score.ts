@@ -1,12 +1,12 @@
 /**
- * usage : The Score class is used to increment and reset a score value, and display it in an HTML element.
+ * usage: The Score class is used to increment and reset a score value, and display it in an HTML element that will automatically update itself.
  */
 export class Score {
     private element: HTMLElement;
     private _score: number;
 
     /**
-     * Creates a new instance of the Score class with an initial value of 0 and an HTML element to display the score.
+     * Creates a new instance of the Score class with an initial value of 0 and an HTML element to display the score automatically.
      * @param element - The HTML element to display the score.
      */
     constructor(element: HTMLElement) {
@@ -14,7 +14,7 @@ export class Score {
         this._score = 0;
     }
     /**
-     * Increases the score value by 1 and updates the score display in the HTML element with the method display.
+     * Increases the value of the score by 1 and updates the display of the score in the HTML element with the display method automatically.
      */
     increment() {
         this._score++;
@@ -22,7 +22,7 @@ export class Score {
     }
 
     /**
-     * Resets the score value to 0 and updates the score display in the HTML element with the method display.
+     * Resets the score value to 0 and updates the score display in the HTML element with the method display automatically.
      */
     reset() {
         this._score = 0;
