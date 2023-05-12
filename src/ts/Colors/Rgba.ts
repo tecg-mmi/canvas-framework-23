@@ -1,13 +1,13 @@
 import {Rgb} from "./Rgb";
 
 /**
- * An RGBa color
+ * An RGBA color
  *
  * @extends Rgb
- * @param red - The red component of the RGB color int(0-255).
- * @param green - The green component of the RGB color int(0-255).
- * @param blue - The blue component of the RGB color int(0-255).
- * @param alpha - The alpha component of the RGB color float(0-1).
+ * @param red - The red component of the RGBA color int(0-255).
+ * @param green - The green component of the RGBA color int(0-255).
+ * @param blue - The blue component of the RGBA color int(0-255).
+ * @param alpha - The alpha component of the RGBA color float(0-1).
  */
 export class Rgba extends Rgb {
     private readonly alpha: number;
@@ -18,7 +18,7 @@ export class Rgba extends Rgb {
     }
 
     /**
-     * @return a string of the color in rgba form (rgb(r,g,b,a))
+     * @return a string of the color in rgba form (rgba(r,g,b,a))
      */
     public toString = (): string => {
         return `rgba(${this.red},${this.green},${this.blue},${this.alpha})`;
