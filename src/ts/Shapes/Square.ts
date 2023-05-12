@@ -1,14 +1,14 @@
-/*
-* The class Square extends the Shape class and implements the Animatable interface.
-* This class allows you to draw, clear and update a square shape on the canvas.
-* */
 import {Shape} from "./Shape";
 import {ISquare} from "../Types/ISquare";
 import {Animatable} from "../Types/Animatable";
 
+/*
+* The class Square extends the Shape class and implements the Animatable interface.
+* This class allows you to draw, clear and update a square shape on the canvas.
+* */
 export class Square extends Shape implements Animatable {
     /*
-    * Side represents the length of a side of the square.
+    * @readonly side - represents the length of a side of the square.
     * */
     protected readonly side: number;
 
@@ -22,7 +22,7 @@ export class Square extends Shape implements Animatable {
     }
 
     /*
-    * Draws a filled square on the canvas using the : x and y of it's starting positions and it's
+    * Draws a filled square on the canvas using the : x and y of it's starting positions, and it's
     * width and height.
     * */
     draw(): void {
