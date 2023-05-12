@@ -1,9 +1,12 @@
 /**
 * An RGB color.
 *
-* @param red - The red component of the RGB color int(0-255) (read only).
-* @param green - The green component of the RGB color int(0-255) (read only).
-* @param blue - The blue component of the RGB color int(0-255) (read only).
+* @param red - The red component of the RGB color int(0-255).
+* @readonly
+* @param green - The green component of the RGB color int(0-255).
+* @readonly
+* @param blue - The blue component of the RGB color int(0-255).
+* @readonly
 */
 
 export class Rgb {
@@ -14,9 +17,12 @@ export class Rgb {
     /**
      * Creates an instance of the Rgb class.
      *
-     * @param red - The red component of the RGB color int(0-255) (read only).
-     * @param green - The red component of the RGB color int(0-255) (read only).
-     * @param blue - The red component of the RGB color int(0-255) (read only).
+     * @param red - The red component of the RGB color int(0-255).
+     * @readonly
+     * @param green - The red component of the RGB color int(0-255).
+     * @readonly
+     * @param blue - The red component of the RGB color int(0-255).
+     * @readonly
      */
     constructor(red: number, green: number, blue: number) {
         this.red = red;
