@@ -3,9 +3,18 @@ import {MinMax} from "../Types/MinMax";
  * Represents a random number generator that can generate integers and floating-point numbers within a specified range.
  */
 export class Random {
+    /**
+     * @param @readonly min is the minimum value of the range(inclusive).
+     * @param @readonly max is the maximum value of the range (inclusive).
+     * */
     private readonly min: number;
     private readonly max: number;
 
+    /***
+     * Creates an instance of Random class with the given range.
+     * @param min is the minimum value of the range(inclusive).
+     * @param max is the maximum value of the range (inclusive).
+     */
     constructor(min: number, max: number) {
         this.min = min;
         this.max = max;
