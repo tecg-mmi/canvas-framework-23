@@ -1,4 +1,4 @@
-import {Circle} from "../shapes/Circle";
+import {Circle} from "../Shapes/Circle";
 import {IMouse} from "../Types/IMouse";
 
 export class Mouse extends Circle {
